@@ -8,8 +8,8 @@
     <title>Daily Journal</title>
 </head>
 <body>
-    <h2>Daily Journal</h2>
     <main id="container">
+        <h2>Daily Journal</h2>
         <!-- this is a reminder for the user -->
         <form class="entryForm">
             <fieldset>
@@ -30,10 +30,11 @@
             <fieldset>
                 <label for="entryDate">Mood for the day</label>
                 <select id="Mood">
-                    <option>happy</option>       
-                    <option>sad</option>    
-                    <option>angry</option>    
-                    <option>hungry</option>    
+                    <option>Happy</option>       
+                    <option>Sad</option>    
+                    <option>Angry</option>    
+                    <option>Excited</option>
+                    <option>Anxious</option>     
                 </select> 
                 
             </fieldset>
@@ -44,6 +45,6 @@
         </form>
         <article id="entries"></article>
     </main>
-
+    <script type = "module" src="/scripts/main.js"></script>
 </body>
 </html>
