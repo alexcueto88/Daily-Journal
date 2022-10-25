@@ -1,6 +1,5 @@
 const journalEntries = [ 
 {   id: 1,
-    dayOfWeek: "Monday", 
     date: "01/01/2022",
     concept: "HTML",
     entry: "I learned the basics of HTML.",
@@ -9,7 +8,6 @@ const journalEntries = [
 },
 
 {   id: 2,
-    dayOfWeek: "Tuesday",
     date: "01/02/2022",
     concept: "CSS",
     entry: "I learned the basics of CSS.",
@@ -18,7 +16,6 @@ const journalEntries = [
 },
 
 {   id: 3,
-    dayOfWeek: "Wednesday",
     date: "01/03/2022",
     concept: "JavaScrip",
     entry: "I learned the basics of JavaScript.",
@@ -27,7 +24,6 @@ const journalEntries = [
 },
 
 {   id: 4,
-    dayOfWeek: "Thursday",
     date: "01/04/2022",
     concept: "Variables",
     entry: "I learned the basics of Variables.",
@@ -35,7 +31,6 @@ const journalEntries = [
 },
 
 {   id: 5,
-    dayOfWeek: "Friday",
     date: "01/05/2022",
     concept: "Numbers",
     entry: "I learned the basics of Numbers.",
@@ -43,7 +38,6 @@ const journalEntries = [
 },
 
 {   id: 6,
-    dayOfWeek: "Saturday",
     date: "01/06/2022",
     concept: "Strings",
     entry: "I learned the basics of Strings.",
@@ -52,14 +46,28 @@ const journalEntries = [
 },
 
 {   id: 7,
-    dayOfWeek: "Sunday",
     date: "01/07/2022",
     concept: "Loops",
     entry: "I learned the basics of Loops.",
     mood: "Sad"
 }
+]
 
-];
+const getNewEntryId = () => {
+    let highestEntryId = journalEntries.sort((a, b) => b.id - a.id)[0].id
+    return highestEntryId + 1
+  }
+
+  export const addNewEntry = (newEntry) => {
+    const newEntryId = getNewEntryId()
+    newEntry.id = newEntryId
+    journalEntries.push(newEntry)
+    
+    document.dispatchEvent(new CustomEvent("stateChanged"))
+  }
+
+
+
 
 
 export const exportEntries = () => {

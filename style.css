@@ -1,0 +1,108 @@
+/* /* #container {
+    display: flex;
+
+}   */
+
+
+/* this is a reminder of whay I am doing */
+/* 
+label {display: flex}
+body {
+    background-color: rgb(127, 255, 236);
+    font-style: italic;
+    font-size: large;
+} */ 
+
+body {
+    background-color: rgb(197, 246, 249);
+    
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    color: blueviolet;
+
+    border: 1px solid red;
+}
+
+.logoImage {
+    height: 250px;
+    width: 250px;
+    margin-left: 50px;
+}
+
+.pageTitle {
+    font-family: 'Island Moments', cursive;
+    font-size: 100px;
+
+}
+
+.subheaders {
+    display: flex;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border: 1px solid green;
+    justify-content: center;
+    align-content: center;
+}
+
+.entrySubhead {
+    border: 1px solid blue;
+
+}
+
+.entryContainer {
+    border: 1px solid rgb(195, 0, 255);
+    display: flex;
+    max-height: 800px;
+    min-height: 800px;
+    max-width: 500px;
+    min-width: 500px;
+    margin-left: 25px;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.label{
+    margin-right: 30px;
+
+}
+
+.container {
+    border: 5px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: row; */
+
+}
+
+#entries {
+    border: 5px solid hotpink;
+    max-height: 800px;
+    min-height: 800px;
+    max-width: 1200px;
+    min-width: 1200px;
+
+}
+
+.journalPreviousEntries {
+    border: 5px solid red;
+    max-height: 300px;
+    min-height: 100px;
+    max-width: 150px;
+    min-width: 150px;
+    display:inline-block;
+
+}

@@ -4,47 +4,88 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./scripts/style.css">
-    <title>Daily Journal</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Island+Moments&display=swap" rel="stylesheet">
+
+   <title>Daily Journal</title>
 </head>
 <body>
     <main id="container">
-        <h2>Daily Journal</h2>
-        <!-- this is a reminder for the user -->
-        <form class="entryForm">
-            <fieldset>
-                <label for="entryDate">Date</label>
-                <input type="date" name="entryDate" class="entryForm__date">
-            </fieldset>
+        <div>
+        <header class="header">
+            <h2 class = "pageTitle">Alex's Daily Journal</h2>
+            <img src="logo.png" alt="daily journal logo" class = "logoImage">
 
-            <fieldset>
-                <label for="entryForm">Concepts covered</label>
-                <input type="text" name="entryForm" class="entryForm">
-            </fieldset>
-
-            <fieldset>
-                <label for="entryDate">Journal Entry</label>
-                <textarea id="entry" placeholder="Type Here"></textarea>
-            </fieldset>
-
-            <fieldset>
-                <label for="entryDate">Mood for the day</label>
-                <select id="Mood">
-                    <option>Happy</option>       
-                    <option>Sad</option>    
-                    <option>Angry</option>    
-                    <option>Excited</option>
-                    <option>Anxious</option>     
-                </select> 
-                
-            </fieldset>
-            
+        </header>
+        </div>
+        
+        <div class="subheaders">
+            <div class = "entrySubhead">
+                <h1>CREATE AN ENTRY</h1>
+            </div>
+            <div class = "previousSubhead">
+                <h1>PREVIOUS ENTRIES</h1>
+            </div>
+        </div>    
+        </div>
+        <div class = "container">
+            <div class = "entryContainer">
+                <div class="card">
+                    <div class="label">
+                        <h2>Date of Entry</h2>
+                    </div>
+                    <div class="box date">
+                        <input type="date" id="entryDate" name="entryDate" class="entryForm__date">
+                    </div>
+                </div>
+        
+                <div class="card">
+                    <div class="label">
+                        <h2>Concepts Covered</h2>
+                    </div>
+                    <div class="box concepts">
+                        <input type="text" id="entryForm" name="entryForm" class="entryForm">
+                    </div>
+                </div>
+        
+                <div class="card">
+                    <div class="label">
+                        <h2>Journal Entry</h2>
+                    </div>
+                    <div class="box journalEntry">
+                        <textarea id="entry" placeholder="Type Here"></textarea>
+                    </div>
+                </div>
+        
+                <div class="card">
+                    <div class="label">
+                        <h2>Mood For The Day</h2>
+                    </div>
+                    <div class="box mood">
+                        <select id="Mood">
+                            <option>Happy</option>       
+                            <option>Sad</option>    
+                            <option>Angry</option>    
+                            <option>Excited</option>
+                            <option>Anxious</option>     
+                        </select> 
+                    </div>
+                </div>
+        <div class="button">
             <button type="button" id="submit">Record Journal Entry</button>
+        </div>
 
+            </div>
+            <article id="entries"></article>
 
-        </form>
-        <article id="entries"></article>
+        </div>
+        
+  
+          
+   
     </main>
-    <script type = "module" src="/scripts/main.js"></script>
+    <script type="module" src="/scripts/main.js"></script>
 </body>
 </html>
